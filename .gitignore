@@ -2,7 +2,7 @@
 dist/
 pystringbio/
 pyproteins/
-pyproteinsExt/
+pyproteinsext/
 unigo/
 uniprot_redis/
 

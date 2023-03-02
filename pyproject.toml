@@ -6,9 +6,9 @@ authors = ["glaunay <pitooon@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
-pyproteinsext = "^3.1.0"
 unigo         = {path = "./unigo", develop=true}
-uniprot_redis = "^1.2.0"
+uniprot_redis = {path = "./uniprot_redis", develop=true}
+pyproteinsext = {path = "./pyproteinsext", develop=true}
 
 
 [tool.poetry.dev-dependencies]

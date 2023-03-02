@@ -638,14 +638,14 @@ test = ["anyio[trio] (>=3.2.1,<4.0.0)", "black (==22.3.0)", "databases[sqlite] (
 
 [[package]]
 name = "fastjsonschema"
-version = "2.16.2"
+version = "2.16.3"
 description = "Fastest Python implementation of JSON schema"
 category = "main"
 optional = false
 python-versions = "*"
 files = [
-    {file = "fastjsonschema-2.16.2-py3-none-any.whl", hash = "sha256:21f918e8d9a1a4ba9c22e09574ba72267a6762d47822db9add95f6454e51cc1c"},
-    {file = "fastjsonschema-2.16.2.tar.gz", hash = "sha256:01e366f25d9047816fe3d288cbfc3e10541daf0af2044763f3d0ade42476da18"},
+    {file = "fastjsonschema-2.16.3-py3-none-any.whl", hash = "sha256:04fbecc94300436f628517b05741b7ea009506ce8f946d40996567c669318490"},
+    {file = "fastjsonschema-2.16.3.tar.gz", hash = "sha256:4a30d6315a68c253cfa8f963b9697246315aa3db89f98b97235e345dedfb0b8e"},
 ]
 
 [package.extras]
@@ -797,14 +797,14 @@ test = ["flaky", "ipyparallel", "pre-commit", "pytest (>=7.0)", "pytest-asyncio"
 
 [[package]]
 name = "ipython"
-version = "8.10.0"
+version = "8.11.0"
 description = "IPython: Productive Interactive Computing"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ipython-8.10.0-py3-none-any.whl", hash = "sha256:b38c31e8fc7eff642fc7c597061fff462537cf2314e3225a19c906b7b0d8a345"},
-    {file = "ipython-8.10.0.tar.gz", hash = "sha256:b13a1d6c1f5818bd388db53b7107d17454129a70de2b87481d555daede5eb49e"},
+    {file = "ipython-8.11.0-py3-none-any.whl", hash = "sha256:5b54478e459155a326bf5f42ee4f29df76258c0279c36f21d71ddb560f88b156"},
+    {file = "ipython-8.11.0.tar.gz", hash = "sha256:735cede4099dbc903ee540307b9171fbfef4aa75cfcacc5a273b2cda2f02be04"},
 ]
 
 [package.dependencies]
@@ -816,7 +816,7 @@ jedi = ">=0.16"
 matplotlib-inline = "*"
 pexpect = {version = ">4.3", markers = "sys_platform != \"win32\""}
 pickleshare = "*"
-prompt-toolkit = ">=3.0.30,<3.1.0"
+prompt-toolkit = ">=3.0.30,<3.0.37 || >3.0.37,<3.1.0"
 pygments = ">=2.4.0"
 stack-data = "*"
 traitlets = ">=5"
@@ -1022,14 +1022,14 @@ test = ["codecov", "coverage", "ipykernel (>=6.14)", "mypy", "paramiko", "pre-co
 
 [[package]]
 name = "jupyter-console"
-version = "6.6.1"
+version = "6.6.2"
 description = "Jupyter terminal console"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "jupyter_console-6.6.1-py3-none-any.whl", hash = "sha256:b32b5cb673a90909911988a2f1906ced005b07e8dadab6c8664d3f5de44a8191"},
-    {file = "jupyter_console-6.6.1.tar.gz", hash = "sha256:5931212d5cbc1f956f6fd615755b5e15f389a8eaa697288dbbe4377017615ecc"},
+    {file = "jupyter_console-6.6.2-py3-none-any.whl", hash = "sha256:0ba2da017be36bfae489f233f031f251da5b88b0ceafabea240b465ee474944a"},
+    {file = "jupyter_console-6.6.2.tar.gz", hash = "sha256:7385dfed8a01fd51e3c98449dae24f38c1ba015d2073835e785671653a0967fc"},
 ]
 
 [package.dependencies]
@@ -1436,14 +1436,14 @@ files = [
 
 [[package]]
 name = "more-itertools"
-version = "9.0.0"
+version = "9.1.0"
 description = "More routines for operating on iterables, beyond itertools"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "more-itertools-9.0.0.tar.gz", hash = "sha256:5a6257e40878ef0520b1803990e3e22303a41b5714006c32a3fd8304b26ea1ab"},
-    {file = "more_itertools-9.0.0-py3-none-any.whl", hash = "sha256:250e83d7e81d0c87ca6bd942e6aeab8cc9daa6096d12c5308f3f92fa5e5c1f41"},
+    {file = "more-itertools-9.1.0.tar.gz", hash = "sha256:cabaa341ad0389ea83c17a94566a53ae4c9d07349861ecb14dc6d0345cf9ac5d"},
+    {file = "more_itertools-9.1.0-py3-none-any.whl", hash = "sha256:d2bc7f02446e86a68911e58ded76d6561eea00cddfb2a91e7019bbb586c799f3"},
 ]
 
 [[package]]
@@ -1826,14 +1826,14 @@ twisted = ["twisted"]
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.37"
+version = "3.0.38"
 description = "Library for building powerful interactive command lines in Python"
 category = "main"
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "prompt_toolkit-3.0.37-py3-none-any.whl", hash = "sha256:6a2948ec427dfcc7c983027b1044b355db6aaa8be374f54ad2015471f7d81c5b"},
-    {file = "prompt_toolkit-3.0.37.tar.gz", hash = "sha256:d5d73d4b5eb1a92ba884a88962b157f49b71e06c4348b417dd622b25cdd3800b"},
+    {file = "prompt_toolkit-3.0.38-py3-none-any.whl", hash = "sha256:45ea77a2f7c60418850331366c81cf6b5b9cf4c7fd34616f733c5427e6abbb1f"},
+    {file = "prompt_toolkit-3.0.38.tar.gz", hash = "sha256:23ac5d50538a9a38c8bde05fecb47d0b403ecd0662857a86f886f798563d5b9b"},
 ]
 
 [package.dependencies]
@@ -2005,21 +2005,23 @@ numpy = ">=1.22.2,<2.0.0"
 
 [[package]]
 name = "pyproteinsext"
-version = "3.1.0"
+version = "3.0.4"
 description = "'Extending pyproteins for bioinformatics tools&services'"
 category = "main"
 optional = false
-python-versions = ">=3.7,<4.0"
-files = [
-    {file = "pyproteinsext-3.1.0-py3-none-any.whl", hash = "sha256:6884b92d7deac17f176452a345bd73dfcc73ad32f265aee2752a7a968e08ebd5"},
-    {file = "pyproteinsext-3.1.0.tar.gz", hash = "sha256:8396e0d55233b9a8f2d2c4f4be2959fd434463b7d67e20248a43c5f57162c963"},
-]
+python-versions = "^3.7"
+files = []
+develop = true
 
 [package.dependencies]
-biopython = ">=1.79,<2.0"
-bs4 = ">=0.0.1,<0.0.2"
-networkx = ">=2.6.3,<3.0.0"
-pyproteins = ">=2.0.0,<3.0.0"
+biopython = "^1.79"
+bs4 = "^0.0.1"
+networkx = "^2.6.3"
+pyproteins = "^2.0.0"
+
+[package.source]
+type = "directory"
+url = "pyproteinsext"
 
 [[package]]
 name = "pyrediscore"
@@ -2672,7 +2674,7 @@ marshmallow = "^3.14.1"
 notebook = "^6.4.12"
 Owlready2 = "^0.38"
 pydantic = "^1.10.1"
-pyproteinsext = "^3.0.3"
+pyproteinsext = {path = "../pyproteinsext", develop = true}
 requests = "^2.27.1"
 requires = "^0.10.2"
 scipy = "^1.8.0"
@@ -2684,22 +2686,24 @@ url = "unigo"
 
 [[package]]
 name = "uniprot-redis"
-version = "1.2.0"
+version = "1.1.1"
 description = ""
 category = "main"
 optional = false
-python-versions = ">=3.8,<4.0"
-files = [
-    {file = "uniprot_redis-1.2.0-py3-none-any.whl", hash = "sha256:3ee0ddfd36e18e02120776b177ea6273501b60d032d537c11d2cb7640af08f93"},
-    {file = "uniprot_redis-1.2.0.tar.gz", hash = "sha256:fc80979166615a06192f93d49c0ff98f4b9026f44f67702cf6844178bc83fb10"},
-]
+python-versions = "^3.8"
+files = []
+develop = true
 
 [package.dependencies]
-docopt = ">=0.6.2,<0.7.0"
-fastapi = ">=0.79.0,<0.80.0"
-pyproteinsext = ">=3.0.3,<4.0.0"
-pyrediscore = ">=1.0.0,<2.0.0"
-uvicorn = ">=0.18.2,<0.19.0"
+docopt = "^0.6.2"
+fastapi = "^0.79.0"
+pyproteinsext = {path = "../pyproteinsext", develop = true}
+pyrediscore = "^1.0.0"
+uvicorn = "^0.18.2"
+
+[package.source]
+type = "directory"
+url = "uniprot_redis"
 
 [[package]]
 name = "uri-template"
@@ -2867,21 +2871,21 @@ typing-extensions = ">=4.0.0,<5.0.0"
 
 [[package]]
 name = "zipp"
-version = "3.14.0"
+version = "3.15.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "zipp-3.14.0-py3-none-any.whl", hash = "sha256:188834565033387710d046e3fe96acfc9b5e86cbca7f39ff69cf21a4128198b7"},
-    {file = "zipp-3.14.0.tar.gz", hash = "sha256:9e5421e176ef5ab4c0ad896624e87a7b2f07aca746c9b2aa305952800cb8eecb"},
+    {file = "zipp-3.15.0-py3-none-any.whl", hash = "sha256:48904fc76a60e542af151aded95726c1a5c34ed43ab4134b597665c86d7ad556"},
+    {file = "zipp-3.15.0.tar.gz", hash = "sha256:112929ad649da941c23de50f356a2b5570c954b65150642bccdd66bf194d224b"},
 ]
 
 [package.extras]
 docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
-testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools", "more-itertools", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)"]
+testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more-itertools", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "b61a3f4c2a4d6d20425f3bc727a67348320a0f2f414acb32d41cfd0d0b1281ba"
+content-hash = "c3e325f7430ffeb2cca424a6a32cf335204d0203e4179fb41f0507040243f241"
