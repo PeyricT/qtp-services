@@ -600,6 +600,27 @@ files = [
 ]
 
 [[package]]
+name = "ensembl-redis"
+version = "0.1.0"
+description = ""
+category = "main"
+optional = false
+python-versions = "^3.8"
+files = []
+develop = true
+
+[package.dependencies]
+docopt = "^0.6.2"
+fastapi = "^0.79.0"
+pyproteinsext = {path = "../pyproteinsext", develop = true}
+pyrediscore = "^1.0.0"
+uvicorn = "^0.18.2"
+
+[package.source]
+type = "directory"
+url = "ensembl_redis"
+
+[[package]]
 name = "executing"
 version = "1.2.0"
 description = "Get the currently executing AST node of a frame, and other information"
@@ -2888,4 +2909,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "c3e325f7430ffeb2cca424a6a32cf335204d0203e4179fb41f0507040243f241"
+content-hash = "73821062c465d7fd48ef127e12a3510c73422a44a65b1a107728a812023dc406"
