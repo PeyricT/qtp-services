@@ -6,11 +6,11 @@ authors = ["glaunay <pitooon@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
-unigo         = {path = "./unigo", develop=true}
-uniprot_redis = {path = "./uniprot_redis", develop=true}
-ensembl_redis = {path = "./ensembl_redis", develop=true}
-pyproteinsext = {path = "./pyproteinsext", develop=true}
-
+unigo               = {path = "./unigo", develop=true}
+uniprot_redis       = {path = "./uniprot_redis", develop=true}
+ensembl_redis       = {path = "./ensembl_redis", develop=true}
+pyproteinsext       = {path = "./pyproteinsext", develop=true}
+multiomics_services = {path = "./multiomics_services", develop=true}
 
 
 [tool.poetry.dev-dependencies]

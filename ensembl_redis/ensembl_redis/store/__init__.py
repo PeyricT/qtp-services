@@ -1,14 +1,16 @@
 from pyrediscore.redantic import RedisStore, KeyStoreError, StoreKeyNotFound
-from .schemas import EnsemblDatum, EnsemblCollection, EnsemblAC
+from .schemas import EnsemblDatum, EnsemblCollection, EnsemblAC, EnsemblGeneToId
 from pydantic import ValidationError
 from sys import stderr
 from typing import List
 from collections import defaultdict
+import time as t
 
 class EnsemblStore():
     def __init__(self, host:str="127.0.0.1", port:int=6379):
         self.base_store = RedisStore(host, port)
         self.base_store.load_model(EnsemblDatum, 'id')
+        self.base_store.load_model(EnsemblGeneToId, 'gene_name')
         self.base_store.load_model(EnsemblCollection, 'comments') # to wipe and replace by 
         self.genes = None
         
@@ -33,12 +35,18 @@ class EnsemblStore():
                     transcript_id=gene['transcript_id'] if 'transcript_id' in gene else None,
                     protein_id=gene['protein_id'] if 'protein_id' in gene else None,
                     )
+                genetoid = EnsemblGeneToId(
+                    gene_name=gene['gene_name'],
+                    gene_id=gene_id[0],
+                    gene_version=gene_id[1] if len(gene_id)>1 else None,
+                )
             except ValidationError as e:
                 print(f"Validation failed for {gene['gene_id']}: {str(e)}", file=stderr)
                 continue
 
             try:
                 self.base_store.add(obj)
+                self.base_store.add(genetoid)
                 #print(prot.id, "added")
             except KeyStoreError:
                 #print("Already in db", prot.id)
@@ -104,6 +112,23 @@ class EnsemblStore():
         resp = {}
         for ensembl_id in ensembl_ids:
             resp[ensembl_id] = self.get_gene(ensembl_id)
+        return resp
+    
+    def get_genes_ids(self, genes_names):
+        resp = []
+        noids = []
+        t0 = t.time()
+        for gene_name in genes_names:
+            try:
+                temp_id = self.base_store.get(gene_name, EnsemblGeneToId).gene_id
+            except Exception as e:
+                noids.append(gene_name)
+                temp_id = "NULL"
+            resp.append(temp_id)
+        
+        print(t.time()-t0)
+        print(f"not founds gene : {noids}")
+        print(f"return {len(resp)} ids")
         return resp
 
     def get_collections_from_genes(self, ensembl_ids):

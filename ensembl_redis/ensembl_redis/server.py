@@ -13,6 +13,9 @@ class EnsemblRequest(BaseModel) :
     ensemblIDs : List[EnsemblAC]
 
 
+class EnsemblFreeRequest(BaseModel) : 
+    params : List[str]
+
 app = FastAPI()
 origins = ["*"]
 app.add_middleware(
@@ -41,18 +44,24 @@ async def len_db():
 async def get_gene(ensembl_id: EnsemblAC):
     return store.get_gene(ensembl_id)
 
-@app.post('/ensembl')
+@app.post('/ensembls')
 async def get_genes(ensembl_request : EnsemblRequest):
     print("get genes", ensembl_request.ensemblIDs)
     return store.get_genes(ensembl_request.ensemblIDs)
 
+@app.post('/ensembls/listids')
+async def get_list_ids(ensembl_request: EnsemblFreeRequest):
+    print(f"get_gene_ids {len(ensembl_request.params)}")
+    return store.get_genes_ids(ensembl_request.params)
+
 @app.post('/collection_scan')
-async def get_collection(ensembl_request : EnsemblRequest):
-    print(f"get collection for {len(ensembl_request.EnsemblIDs)} genes")
-    return store.get_collections_from_genes(ensembl_request.ensemblIDs)
+async def get_collection(ensembl_request : EnsemblFreeRequest):
+    print(f"get collection for {len(ensembl_request.params)} genes")
+    return store.get_collections_from_genes(ensembl_request.params)
 
 def start(host, port):
     """Launched with `poetry run start` at root level"""
+    print("test")
     uvicorn.run("ensembl_redis.server:app", host=host, port=port, reload=True)
 
 def load_data(gtf, coll_name:str):

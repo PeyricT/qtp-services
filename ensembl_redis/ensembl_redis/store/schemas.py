@@ -48,3 +48,8 @@ class EnsemblDatum(BaseModel):
 class EnsemblCollection(BaseModel):
     comments:str
     content:List[EnsemblAC]
+
+class EnsemblGeneToId(BaseModel):
+    gene_name: str
+    gene_id: EnsemblAC
+    gene_version: Optional[int]
